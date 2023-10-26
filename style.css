@@ -1,0 +1,111 @@
+@charset "utf-8";
+@font-face {
+    font-family: font1;
+    src: url(BAD\ GRUNGE.ttf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    /* As unidades relativas vw (viewport width) e vh (viewport height) utilizam a largura e altura da viewport respectivamente. uso recomendado pra configurar tamanho da tela ou conteiner*/
+background-image: url(marvel15l.jpg);}
+
+.conteiner{
+    height: 460px;
+    width: 799px;
+    overflow: hidden; 
+    /* esconde o que untrapaça o tamanho do conteiner */
+    position: absolute;
+    /* torna possiver alterar a posiçao do conteiner */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* movimenta o eixo central */
+}
+
+.imagem img{
+    width: 100%;
+    height: 100%;
+}
+
+.navegacao{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;  
+}
+
+.bar{
+    background-color: #a00b0b;
+    width: 30px;
+    height: 5px;
+    margin: 6px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.bar:hover{
+    background-color: #000;
+}
+
+input{
+    display: none;
+}
+
+.imagens{
+    display: flex;
+    height: 100%;
+    width: 600%;
+
+}
+
+.imagem{
+    width: 16.6666666667%;
+    transition: 0.5s;
+}
+
+#imagem1:checked ~ .img1{
+    margin-left: 0;  
+}
+
+#imagem2:checked ~ .img2{
+    margin-left: -16.6666666667%;;  
+}
+
+#imagem3:checked ~ .img3{
+    margin-left: -33.3333333333%;  
+}
+
+#imagem4:checked ~ .img4{
+    margin-left: -50%;  
+}
+
+#imagem5:checked ~ .img5{
+    margin-left: -66.6666666667%;  
+}
+#imagem6:checked ~ .img6{
+    margin-left: -83.3333333333%
+    ;
+}
+h1{
+    color: #d5dae0;
+    font-family: font1;
+    margin-left: 5em;
+    font-size: 100px;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center; 
+    margin-left: 50px;
+    color: #153d6d;
+    margin-top: 560px;
+    font-family:cursive;
+    font-size: 1em;
+}
+a{
+    color: #153d6d;
+}
